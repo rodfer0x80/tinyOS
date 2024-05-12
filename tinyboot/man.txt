@@ -1,0 +1,10 @@
+To boot we need a binary 512 bytes size file
+ending in x0x55 0xaa
+The rest of the code simply loops in order to fill
+the remaining bytes
+$ is current memory address
+$$ is current section address
+db is define byte
+so we remove the size of the loop code
+TODO: not sure we need the jmp $ but will test it out later
+from 510 which is 512 - the 2 bytes from the end that we need to boot
